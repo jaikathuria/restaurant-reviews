@@ -142,6 +142,10 @@ nav h1 a {
   text-align-last: center;
 }
 
+.filter-wrapper {
+	text-align: center;
+  padding-top: 5px;
+}
 /* ====================== Restaurant Listing ====================== */
 #restaurants-list {
   background-color: #f3f3f3;
@@ -272,14 +276,14 @@ nav h1 a {
 }
 #reviews-list li {
   background-color: #fff;
-    border: 2px solid #f3f3f3;
+  border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
-  width: 85%;
+  width: calc(100% - 40px);
 }
 #reviews-list li p {
   margin: 0 0 10px;
@@ -307,7 +311,7 @@ Small devices (landscape phones, 576px and up)
 
 	.inside #map-container {
 	  background: blue none repeat scroll 0 0;
-	  height: 87%;
+	  height: calc(100% - 145px);
 	  position: fixed;
 	  right: 0;
 	  top: 80px;
