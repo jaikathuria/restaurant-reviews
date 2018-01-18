@@ -43,5 +43,9 @@ const cacheIt = (event) => caches.open(cacheName).then((cache) => {
   return fetch(event.request).then((response) => {
     cache.put(event.request, response.clone());
     return response;
+  }).catch((error) => {
+      if(event.request.url.indexOf('restaurant.html') > 0 ) {
+        return cache.match('/restaurant.html')
+      }
   })
 })
