@@ -50,7 +50,11 @@ fetchRestaurantFromURL = (callback) => {
  */
 fillRestaurantHTML = (restaurant = self.restaurant) => {
   const name = document.getElementById('restaurant-name');
-  name.innerHTML = restaurant.name;
+  const a  = document.createElement('a');
+  a.href = ".";
+  a.innerHTML = restaurant.name;
+  a.setAttribute('tabIndex',0)
+  name.appendChild(a);
 
   const address = document.getElementById('restaurant-address');
   address.innerHTML = restaurant.address;
@@ -117,6 +121,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  li.setAttribute("tabindex",0);
   const name = document.createElement('p');
   name.innerHTML = review.name;
   li.appendChild(name);
@@ -141,7 +146,11 @@ createReviewHTML = (review) => {
 fillBreadcrumb = (restaurant = self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
-  li.innerHTML = restaurant.name;
+  const a = document.createElement('a');
+  a.innerHTML = restaurant.name;
+  a,href = ".";
+  a.setAttribute('tabIndex',0)
+  li.appendChild(a);
   breadcrumb.appendChild(li);
 }
 
